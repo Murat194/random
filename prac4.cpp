@@ -89,31 +89,30 @@ public:
 
 int main() {
     
-    // FileResource* tf_raw = new TextFile("main.txt");
-    // FileResource* bf_raw = new BinaryFile("main.bin");
+    FileResource* tf_raw = new TextFile("main.txt");
+    FileResource* bf_raw = new BinaryFile("main.bin");
 
-    // // Помещаем указатели в вектор
-    // vector<FileResource*> raw_ptrs;
-    // raw_ptrs.push_back(tf_raw);
-    // raw_ptrs.push_back(bf_raw);
+    vector<FileResource*> raw_ptrs;
+    raw_ptrs.push_back(tf_raw);
+    raw_ptrs.push_back(bf_raw);
 
-    // // Вызываем open() и read()
-    // for (auto& ptr : raw_ptrs) {
-    //     ptr->open();
-    //     ptr->read();
-    //     //ptr->close();
-    // }
+    for (auto& ptr : raw_ptrs) {
+        ptr->open();
+        ptr->read();
+        //ptr->close();
+    }
 
-    // raw_ptrs[0]->close(); // Закрываем один
-    // delete bf_raw;
+    raw_ptrs[0]->close();
+    delete bf_raw;
 
-    // for (auto& ptr : raw_ptrs) {
-    //     delete ptr;
-    // }
+    for (auto& ptr : raw_ptrs) {
+        delete ptr;
+    }
    
 
     vector<unique_ptr<FileResource>> fileContainer;
 
+  
     fileContainer.push_back(make_unique<TextFile>("main.py"));
     fileContainer.push_back(make_unique<BinaryFile>("main.cpp"));
 
