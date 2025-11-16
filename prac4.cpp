@@ -16,14 +16,13 @@ public:
     virtual ~FileResource() {
         if (isOpen) {
             cout << "Предупреждение: Файл '" << filename << "' был уничтожен, но оставался открытым." << endl;
+            
         }
     }
-
 
     virtual void open() = 0;
     virtual void close() = 0;
     virtual void read() = 0;
-
 
     const string& getFilename() const { 
         return filename;
@@ -33,7 +32,9 @@ public:
     }
 
 protected:
-    void setIsOpen(bool state) { isOpen = state; }
+    void setIsOpen(bool a) {
+        isOpen = a;
+    }
 };
 
 
@@ -89,25 +90,25 @@ public:
 
 int main() {
     
-    FileResource* tf_raw = new TextFile("main.txt");
-    FileResource* bf_raw = new BinaryFile("main.bin");
+    // FileResource* tf_raw = new TextFile("main.txt");
+    // FileResource* bf_raw = new BinaryFile("main.bin");
 
-    vector<FileResource*> raw_ptrs;
-    raw_ptrs.push_back(tf_raw);
-    raw_ptrs.push_back(bf_raw);
+    // vector<FileResource*> raw_ptrs;
+    // raw_ptrs.push_back(tf_raw);
+    // raw_ptrs.push_back(bf_raw);
 
-    for (auto& ptr : raw_ptrs) {
-        ptr->open();
-        ptr->read();
-        //ptr->close();
-    }
+    // for (auto& ptr : raw_ptrs) {
+    //     ptr->open();
+    //     ptr->read();
+    //     //ptr->close();
+    // }
 
-    raw_ptrs[0]->close();
-    delete bf_raw;
+    // raw_ptrs[0]->close();
+    // delete bf_raw;
 
-    for (auto& ptr : raw_ptrs) {
-        delete ptr;
-    }
+    // for (auto& ptr : raw_ptrs) {
+    //     delete ptr;
+    // }
    
 
     vector<unique_ptr<FileResource>> fileContainer;
