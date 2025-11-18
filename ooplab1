@@ -1,0 +1,176 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+// class Point {
+// private:
+//     int x;
+//     int y;
+
+// public:
+//     Point(int a, int b){
+//         x = a;
+//         y = b;
+//     }
+    
+//     void coordinates(){
+//         cout << x << " " << y << endl;
+//     }
+    
+//     void move(int a, int b){
+//         x += a;
+//         y += b;
+//     }
+    
+//     ~Point(){}
+// };
+
+// int main() {
+//     Point p(1, 2);
+//     p.coordinates();
+//     p.move(2, 2);
+//     p.coordinates();
+//     return 0;
+// }
+
+
+// class Calculator {
+// private:
+//     double a;
+//     double b;
+// public:
+//     Calculator(double x, double y){
+//         a = x;
+//         b = y;
+//     }
+    
+//     double getSum() const {
+//         return a + b;
+//     }
+    
+//     double getMin() const {
+//         return a - b;
+//     }
+    
+//     double getMul() const {
+//         return a * b;
+//     }
+    
+//     double getDiv() const {
+//         if(b != 0) {
+//             return a / b;
+//         } else {
+//             cout << "error div 0" << endl;
+//         }
+//     }
+    
+    
+//     ~Calculator(){}
+// };
+
+// int main(){
+//     Calculator a(10, 5);
+//     cout << a.getSum() << endl;
+//     cout << a.getMin() << endl;
+//     cout << a.getMul() << endl;
+//     cout << a.getDiv() << endl;
+// }
+
+
+
+// class Student {
+// private:
+//     string name;
+//     int year;
+//     double avg;
+// public:
+//     Student(string a, int b, double c){
+//         name = a;
+//         year = b;
+//         avg = c;
+//     }
+    
+//     void setName(string a){
+//         name = a;
+//     }
+//     void setYear(int a){
+//         year = a;
+//     }
+//     void setAvg(double a){
+//         avg = a;
+//     }
+    
+//     string getName(){
+//         return name;
+//     }
+//     int getYear(){
+//         return year;
+//     }
+//     double getAvg(){
+//         return avg;
+//     }
+    
+//     void Display(){
+//         cout << "name: " << name << " year: " << year << " avg ocenka: " << avg << endl;
+//     }
+    
+//     ~Student(){}
+// };
+
+// class StudentManager {
+// private:
+//     vector<Student> students;
+// public:
+
+//     void addStudent(Student a) {
+//         students.push_back(a);
+//     }
+    
+//     void removeStudent(int index) {
+//         if (index >= 0 && index < students.size()) {
+//             students.erase(students.begin() + index);
+//         } else {
+//             cout << "error no student" << endl;
+//         }
+//     }
+    
+//     void displayAllStudents() {
+//         if (students.empty()) {
+//             cout << "error no students" << endl;
+//         } else {
+//             for (int i = 0; i < students.size(); ++i) {
+//                 students[i].Display();
+//             }
+//         }
+//     }
+    
+    
+// };
+
+// int main() {
+//     StudentManager manager;
+
+
+//     Student s1("Vlad", 19, 4.8);
+//     Student s2("Nikita", 19, 3.3);
+//     manager.addStudent(s1);
+//     manager.addStudent(s2);
+
+//     manager.displayAllStudents();
+//     cout << endl << endl;
+    
+//     manager.removeStudent(1);
+//     manager.displayAllStudents();
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
