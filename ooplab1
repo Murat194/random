@@ -167,7 +167,103 @@ using namespace std;
 // }
 
 
+// class BankAccount {
+// private:
+//     string account_number;
+//     int balance;  
+// public:
+//     BankAccount(string a, int b) { 
+//         account_number = a;
+//         if (b < 0) {
+//             balance = 0;
+//             cout << "Initial balance cannot be negative. Set to 0." << endl;
+//         } else {
+//             balance = b;
+//         }
+//     }
+    
+//     void deposit(int a) {  
+//         if (a > 0) {
+//             balance += a;
+//             cout << "Deposit: +" << a << endl << "Balance: " << balance << endl;
+//         } else {
+//             cout << "Invalid deposit amount." << endl;
+//         }
+//     }
 
+//     void withdraw(int a) {  
+//         if (a > 0 && a <= balance) {
+//             balance -= a;
+//             cout << "Withdrawn: -" << a << endl << "Balance: " << balance << endl;
+//         } else {
+//             cout << "Insufficient funds or invalid amount." << endl;
+//         }
+//     }
+
+   
+//     void transfer(BankAccount& target_account, int amount) {
+//         if (amount > 0 && amount <= balance) {
+//             this->withdraw(amount);
+//             target_account.deposit(amount);
+//             cout << "Transfer of " << amount << " from " << account_number 
+//                  << " to " << target_account.account_number << " completed." << endl;
+//         } else {
+//             cout << "Transfer failed: Invalid amount or insufficient funds." << endl;
+//         }
+//     }
+
+//     void Read() {
+//         cout << "Enter account number: ";
+//         cin >> account_number;
+//         double temp_balance;
+//         cout << "Enter initial balance: ";
+//         cin >> temp_balance;
+//         if (temp_balance < 0) {
+//             balance = 0;
+//             cout << "Initial balance cannot be negative. Set to 0." << endl;
+//         } else {
+//             balance = temp_balance;
+//         }
+//     }
+
+
+//     void Display() const {
+//         cout << "Account Number: " << account_number << ", Balance: " << balance << endl;
+//     }
+
+
+//     double getBalance() const {
+//         return balance;
+//     }
+
+//     string getAccountNumber() const {
+//         return account_number;
+//     }
+// };
+
+// int main() {
+//     BankAccount account1("ACC001", 1000.0);
+//     BankAccount account2("ACC002", 500.0);
+
+//     cout << "Initial state:" << endl;
+//     account1.Display();
+//     account2.Display();
+
+//     cout << "\nDeposit 200 to account1:" << endl;
+//     account1.deposit(200.0);
+
+//     cout << "\nWithdraw 150 from account2:" << endl;
+//     account2.withdraw(150.0);
+
+//     cout << "\nTransfer 300 from account1 to account2:" << endl;
+//     account1.transfer(account2, 300.0);
+
+//     cout << "\nFinal state:" << endl;
+//     account1.Display();
+//     account2.Display();
+
+//     return 0;
+// }
 
 
 
