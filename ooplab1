@@ -34,6 +34,7 @@ using namespace std;
 //     return 0;
 // }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // class Calculator {
 // private:
@@ -77,7 +78,7 @@ using namespace std;
 //     cout << a.getDiv() << endl;
 // }
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // class Student {
 // private:
@@ -166,6 +167,58 @@ using namespace std;
 //     return 0;
 // }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// class Book {
+// private:
+//     string name;
+//     string author;
+//     int year;
+
+// public:
+//     Book(string a, string b, int c) {
+//         name = a;
+//         author = b;
+//         year = c;
+//     }
+
+//     string getName() { return name; }
+//     string getAuthor() { return author; }
+//     int getYear() { return year; }
+
+//     void Display() const {
+//         cout << "name: " << name << " author: " << author << " year: " << year << endl;
+//     }
+
+//     ~Book() {}
+// };
+
+// int main() {
+//     vector<Book> books;
+
+//     books.push_back(Book("Vlad", "Vladosik", 2000));
+//     books.push_back(Book("Vlad", "Vladosik", 2002));
+//     books.push_back(Book("Vlad", "Vladosik", 1990));
+//     books.push_back(Book("Vlad", "Vladosik", 2006));
+
+//     for (auto book : books) {
+//         book.Display();
+//     }
+
+//     sort(books.begin(), books.end(), [](Book a, Book b) {
+//         return a.getYear() < b.getYear();
+//     });
+
+//     cout << endl;
+
+//     for (auto book : books) {
+//         book.Display();
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // class BankAccount {
 // private:
