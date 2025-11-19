@@ -3,6 +3,7 @@
 #include <vector>
 using namespace std;
 
+
 // class Point {
 // private:
 //     int x;
@@ -14,12 +15,20 @@ using namespace std;
 //         y = b;
 //     }
     
-//     void coordinates(){
+//     void move(int a, int b){
+//         x += a;
+//         y += b;
+//     }
+    
+//     void Display(){
 //         cout << x << " " << y << endl;
 //     }
     
-//     void move(int a, int b){
-//         x += a;
+//     void Read() {
+//         int a, b;
+//         cin >> a;
+//         cin >> b;
+//         y += a;
 //         y += b;
 //     }
     
@@ -28,15 +37,16 @@ using namespace std;
 
 // int main() {
 //     Point p(1, 2);
-//     p.coordinates();
+//     p.Display();
 //     p.move(2, 2);
-//     p.coordinates();
-//     return 0;
+//     p.Display();
+//     p.Read();
+//     p.Display();
 // }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// class Calculator {
+class Calculator {
 // private:
 //     double a;
 //     double b;
@@ -66,12 +76,24 @@ using namespace std;
 //         }
 //     }
     
+//     void Display(){
+//         cout << a << " " << b << endl;
+//     }
+    
+//     void Read(){
+//         // int x, y;
+//         cin >> a;
+//         cin >> b;
+//         // a += x;
+//         // b += y;
+//     }
     
 //     ~Calculator(){}
 // };
 
 // int main(){
 //     Calculator a(10, 5);
+//     // a.Read();
 //     cout << a.getSum() << endl;
 //     cout << a.getMin() << endl;
 //     cout << a.getMul() << endl;
@@ -80,12 +102,14 @@ using namespace std;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// class Student {
+class Student {
 // private:
 //     string name;
 //     int year;
 //     double avg;
 // public:
+//     Student(){};
+    
 //     Student(string a, int b, double c){
 //         name = a;
 //         year = b;
@@ -116,6 +140,12 @@ using namespace std;
 //         cout << "name: " << name << " year: " << year << " avg ocenka: " << avg << endl;
 //     }
     
+//     void Read(){
+//         cin >> name;
+//         cin >> year;
+//         cin >> avg;
+//     }
+    
 //     ~Student(){}
 // };
 
@@ -136,7 +166,7 @@ using namespace std;
 //         }
 //     }
     
-//     void displayAllStudents() {
+//     void DisplayAll() {
 //         if (students.empty()) {
 //             cout << "error no students" << endl;
 //         } else {
@@ -155,14 +185,19 @@ using namespace std;
 
 //     Student s1("Vlad", 19, 4.8);
 //     Student s2("Nikita", 19, 3.3);
+//     Student s3;
+    
+//     s3.Read();
+    
 //     manager.addStudent(s1);
 //     manager.addStudent(s2);
+//     manager.addStudent(s3);
 
-//     manager.displayAllStudents();
+//     manager.DisplayAll();
 //     cout << endl << endl;
     
 //     manager.removeStudent(1);
-//     manager.displayAllStudents();
+//     manager.DisplayAll();
 
 //     return 0;
 // }
@@ -176,6 +211,8 @@ using namespace std;
 //     int year;
 
 // public:
+//     Book(){};
+    
 //     Book(string a, string b, int c) {
 //         name = a;
 //         author = b;
@@ -190,16 +227,31 @@ using namespace std;
 //         cout << "name: " << name << " author: " << author << " year: " << year << endl;
 //     }
 
+//     void Read(){
+//         cin >> name;
+//         cin >> author;
+//         cin >> year;
+//     }
+
 //     ~Book() {}
 // };
 
 // int main() {
+    
+//     Book b1("Vlad", "Vladosik", 2000);
+//     Book b2("Vlad", "Vladosik", 2002);
+//     Book b3("Vlad", "Vladosik", 1990);
+//     Book b4("Vlad", "Vladosik", 2006);
+//     Book b5;
+    
+//     b5.Read();
 //     vector<Book> books;
 
-//     books.push_back(Book("Vlad", "Vladosik", 2000));
-//     books.push_back(Book("Vlad", "Vladosik", 2002));
-//     books.push_back(Book("Vlad", "Vladosik", 1990));
-//     books.push_back(Book("Vlad", "Vladosik", 2006));
+//     books.push_back(b1);
+//     books.push_back(b2);
+//     books.push_back(b3);
+//     books.push_back(b4);
+//     books.push_back(b5);
 
 //     for (auto book : books) {
 //         book.Display();
@@ -225,11 +277,12 @@ using namespace std;
 //     string account_number;
 //     int balance;  
 // public:
+//     BankAccount(){};
+    
 //     BankAccount(string a, int b) { 
 //         account_number = a;
 //         if (b < 0) {
-//             balance = 0;
-//             cout << "Initial balance cannot be negative. Set to 0." << endl;
+//             cout << "error" << endl;
 //         } else {
 //             balance = b;
 //         }
@@ -238,42 +291,39 @@ using namespace std;
 //     void deposit(int a) {  
 //         if (a > 0) {
 //             balance += a;
-//             cout << "Deposit: +" << a << endl << "Balance: " << balance << endl;
+//             cout << "dep: +" << a << endl << "balik: " << balance << endl;
 //         } else {
-//             cout << "Invalid deposit amount." << endl;
+//             cout << "error" << endl;
 //         }
 //     }
 
-//     void withdraw(int a) {  
+//     void antidep(int a) {  
 //         if (a > 0 && a <= balance) {
 //             balance -= a;
-//             cout << "Withdrawn: -" << a << endl << "Balance: " << balance << endl;
+//             cout << "anti dep: -" << a << endl << "balik: " << balance << endl;
 //         } else {
-//             cout << "Insufficient funds or invalid amount." << endl;
+//             cout << "error" << endl;
 //         }
 //     }
 
    
 //     void transfer(BankAccount& target_account, int amount) {
 //         if (amount > 0 && amount <= balance) {
-//             this->withdraw(amount);
+//             this->antidep(amount);
 //             target_account.deposit(amount);
-//             cout << "Transfer of " << amount << " from " << account_number 
-//                  << " to " << target_account.account_number << " completed." << endl;
+//             cout << "money:" << amount << " from " << account_number 
+//                  << " to " << target_account.account_number << endl;
 //         } else {
-//             cout << "Transfer failed: Invalid amount or insufficient funds." << endl;
+//             cout << "error" << endl;
 //         }
 //     }
 
 //     void Read() {
-//         cout << "Enter account number: ";
 //         cin >> account_number;
 //         double temp_balance;
-//         cout << "Enter initial balance: ";
 //         cin >> temp_balance;
 //         if (temp_balance < 0) {
-//             balance = 0;
-//             cout << "Initial balance cannot be negative. Set to 0." << endl;
+//             cout << "error" << endl;
 //         } else {
 //             balance = temp_balance;
 //         }
@@ -281,7 +331,7 @@ using namespace std;
 
 
 //     void Display() const {
-//         cout << "Account Number: " << account_number << ", Balance: " << balance << endl;
+//         cout << "account: " << account_number << " balik: " << balance << endl;
 //     }
 
 
@@ -295,29 +345,25 @@ using namespace std;
 // };
 
 // int main() {
-//     BankAccount account1("ACC001", 1000.0);
-//     BankAccount account2("ACC002", 500.0);
+//     BankAccount account1("acc1", 1000.0);
+//     BankAccount account2("acc2", 500.0);
+//     BankAccount account3;
+//     account3.Read();
 
-//     cout << "Initial state:" << endl;
 //     account1.Display();
 //     account2.Display();
+//     account3.Display();
 
-//     cout << "\nDeposit 200 to account1:" << endl;
 //     account1.deposit(200.0);
 
-//     cout << "\nWithdraw 150 from account2:" << endl;
-//     account2.withdraw(150.0);
+//     account2.antidep(150.0);
 
-//     cout << "\nTransfer 300 from account1 to account2:" << endl;
 //     account1.transfer(account2, 300.0);
 
-//     cout << "\nFinal state:" << endl;
 //     account1.Display();
 //     account2.Display();
-
-//     return 0;
+//     account3.Display();
 // }
-
 
 
 
